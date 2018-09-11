@@ -1,4 +1,6 @@
 # Priora: An Object Prioritization Utility for Ruby
+[![Gem Version](https://badge.fury.io/rb/priora.svg)](https://badge.fury.io/rb/priora)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7a45f13797375a92b558/maintainability)](https://codeclimate.com/github/eliav-lavi/priora/maintainability)
 
 Priora supplies an easy and intuitive way to prioritize a collection of objects in Ruby.
 It serves as a useful utility for working with a collection of several instances of some data class.
