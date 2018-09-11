@@ -97,7 +97,7 @@ RSpec.describe Priora do
 
     context 'supplying custom class lambdas' do
       before do
-        Priora.configuration.add_conversion_lambda(String, lambda { |value| value.length })
+        Priora.configuration.add_conversion_lambda(String, -> (value) { value.length })
       end
 
       after do

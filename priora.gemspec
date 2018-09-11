@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Eliav Lavi']
   spec.email         = ['eliavlavi@gmail.com']
 
-  spec.summary       = %q{An object prioritization helper}
-  spec.description   = %q{Priora helps in prioritizing a collection of objects according to your needs.}
+  spec.summary       = 'An object prioritization helper'
+  spec.description   = 'Priora helps in prioritizing a collection of objects according to your needs.'
   spec.homepage      = 'http://www.github.com/eliavlavi/priora'
   spec.license       = 'MIT'
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
