@@ -3,3 +3,6 @@ Metrics/LineLength:
 
 Documentation:
   Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']

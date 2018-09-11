@@ -29,7 +29,7 @@ module Priora
       else
         begin
           collection.map { |item| item.class.priorities }.uniq.first
-        rescue StandardError => e
+        rescue StandardError
           raise UnsuppliedPrioritiesError
         end
       end

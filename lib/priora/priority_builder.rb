@@ -15,7 +15,7 @@ module Priora
         else
           raise InvalidPrioritySyntaxError
         end
-      rescue StandardError => e
+      rescue StandardError
         raise InvalidPrioritySyntaxError
       end
 

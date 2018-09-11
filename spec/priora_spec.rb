@@ -60,8 +60,8 @@ RSpec.describe Priora do
 
       context 'and priorities are supplied as a parameter' do
         it 'prioritizes objects according to supplied parameter' do
-          expect(Priora.prioritize(unprioritized_array, by: [:is_sponsored, :like_count])).
-              to eq [high_like_count_sponsored, low_like_count_sponsored, high_like_count_unsponsored]
+          expect(Priora.prioritize(unprioritized_array, by: [:is_sponsored, :like_count]))
+              .to eq [high_like_count_sponsored, low_like_count_sponsored, high_like_count_unsponsored]
         end
       end
     end
@@ -97,15 +97,15 @@ RSpec.describe Priora do
 
     context 'supplying custom class lambdas' do
       before do
-        Priora.configuration.add_conversion_lambda(String, -> (value) { value.length })
+        Priora.configuration.add_conversion_lambda(String, ->(value) { value.length })
       end
 
       after do
         Priora.configuration.remove_conversion_lambda(String)
       end
 
-      let(:long_author_name) { post_class.new(author: 'Sir S. Longname', like_count: anything, is_sponsored: anything)}
-      let(:short_author_name) { post_class.new(author: 'R. Short', like_count: anything, is_sponsored: anything)}
+      let(:long_author_name) { post_class.new(author: 'Sir S. Longname', like_count: anything, is_sponsored: anything) }
+      let(:short_author_name) { post_class.new(author: 'R. Short', like_count: anything, is_sponsored: anything) }
 
       let(:unprioritized_array) { [short_author_name, long_author_name] }
 

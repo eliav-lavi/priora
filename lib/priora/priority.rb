@@ -6,7 +6,7 @@ module Priora
     DIRECTIONAL_METHODS = {
         DIRECTION_DESC => :+,
         DIRECTION_ASC => :-
-    }
+    }.freeze
 
     attr_reader :attribute, :direction
 

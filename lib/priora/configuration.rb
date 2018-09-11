@@ -2,9 +2,9 @@ module Priora
   class Configuration
     def initialize
       @conversion_lambdas = {
-          TrueClass: -> (_) { 1 },
-          FalseClass: -> (_) { 0 },
-          NilClass: -> (_) { 0 }
+          TrueClass: ->(_) { 1 },
+          FalseClass: ->(_) { 0 },
+          NilClass: ->(_) { 0 }
       }
     end
 
